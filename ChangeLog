@@ -1,5 +1,10 @@
 Revision history for Perl extension pRPC-modules.
 
+1998-07-19  Jochen Wiedmann  <joe@ispsoft.de> (0.1004)
+
+	* lib/RPC/pServer.pm: Embedded all occurrences of setlogsock('unix')
+	  into an eval. Required, because it otherwise fails on Solaris.
+
 1998-07-18  Jochen Wiedmann  <joe@spsoft.de> (0.1003)
 
 	* Minor fixes to prevent warnings with DBI::ProxyServer.

@@ -40,7 +40,7 @@ require DynaLoader;
 @EXPORT = qw(
 	
 );
-$VERSION = '0.1003';
+$VERSION = '0.1004';
 
 
 
