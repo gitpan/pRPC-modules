@@ -40,7 +40,7 @@ require DynaLoader;
 @EXPORT = qw(
 	
 );
-$VERSION = '0.1002';
+$VERSION = '0.1003';
 
 
 
@@ -280,7 +280,7 @@ sub new ($@) {
 	$self->Log('debug', "$logClass: Client logs in: "
 		            . $self->{'application'}
 		            . " " . $self->{'version'} . " "
-                            . $self->{'user'});
+		            . ($self->{'user'} || ''));
     }
     if (!defined($self->{'application'})  ||
 	!defined($self->{'version'})) {

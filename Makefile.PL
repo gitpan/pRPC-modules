@@ -23,3 +23,7 @@ WriteMakefile(
     'DEFINE'	=> '',     # e.g., '-DHAVE_SOMETHING' 
     'INC'	=> '',     # e.g., '-I/usr/include/other' 
 );
+
+package MY;
+
+sub libscan { my($self, $path) = @_; ($path =~ /\~$/) ? undef : $path }
