@@ -1,4 +1,7 @@
-Revision history for Perl extension pRPC-modules.
+1998-08-13  Jochen Wiedmann  <joe@ispsoft.de> (0.1005)
+
+	* Makefile.PL: Added check for Sys::Syslog.h to detect problems
+	  with missing sys/syslog.ph.
 
 1998-07-19  Jochen Wiedmann  <joe@ispsoft.de> (0.1004)
 
