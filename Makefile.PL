@@ -2,7 +2,7 @@ use ExtUtils::MakeMaker;
 
 $| = 1;
 print "Checking for Storable ... ";
-eval q{ use Storable (); };
+eval { require Storable; };
 if ($@) {
     print STDERR "\nYou must have installed the 'Storable' module.\n";
     print STDERR "You get it at the CPAN. See 'man CPAN' or 'perldoc CPAN'";

@@ -58,8 +58,10 @@ $RPC::pClient::haveOoStorable = $RPC::pClient::haveOoStorable = 0;
 
     $SIG{'PIPE'} = sub { print STDERR "Got signal PIPE.\n"; };
 
+    if (defined(&Sys::Syslog::setlogsock)) {
+        Sys::Syslog::setlogsock('unix');
+    }
     Sys::Syslog::openlog('client.t', 'pid', 'daemon');
-    Sys::Syslog::setlogsock('unix');
 
     #
     #   We'd prefer to do the following as part of the Server()

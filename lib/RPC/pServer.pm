@@ -1,4 +1,4 @@
-#   Emacs-darling, would you please give us -*- perl -*- mode? :-)
+#   -*- perl -*-
 #
 #
 #   pRPC - Perl RPC, package for writing simple, RPC like clients and
@@ -40,7 +40,7 @@ require DynaLoader;
 @EXPORT = qw(
 	
 );
-$VERSION = '0.1001';
+$VERSION = '0.1002';
 
 
 
@@ -193,7 +193,7 @@ sub new ($@) {
 	if (!$found) {
 	    my $addr;
 	    foreach $addr (@addrs) {
-		if (inet_ntoa($addr) =~ /$mask/) {
+		if (Socket::inet_ntoa($addr) =~ /$mask/) {
 		    $found = 1;
 		    last;
 		}
@@ -584,7 +584,8 @@ RPC::pServer - Perl extension for writing pRPC servers
  
   $sock = IO::Socket::INET->new('LocalPort' => 9000,
 				'Proto' => 'tcp',
-				'Listen' = 5);
+				'Listen' = 5,
+				'Reuse' => 1);
 
   $connection = new RPC::pServer('sock' => $sock,
 				      'configFile' => $file,

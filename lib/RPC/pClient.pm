@@ -1,4 +1,4 @@
-#   Oh, Emacs, who told you to give us -*- perl -*- mode? :-)
+#   -*- perl -*-
 #
 #
 #   pRPC - Perl RPC, package for writing simple, RPC like clients and
@@ -39,7 +39,7 @@ require DynaLoader;
 @EXPORT = qw(
 	
 );
-$VERSION = '0.1001';
+$VERSION = '0.1002';
 
 use POSIX();
 use Sys::Syslog();
